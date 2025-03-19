@@ -6,6 +6,8 @@ function whenLoaded()
 
     makeApp();
 
+    makeTitleOfApp();
+
     // get reference to input
     let htmlInput = document.getElementById("htmlInput");
 
