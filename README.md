@@ -8,10 +8,6 @@ If you enjoy my apps and tutorials please consider buying me a coffee at [paypal
 
 ---
 
-CODE: https://github.com/ChristopherAndrewTopalian/CATopalian_JavaScript_Code_Editor
-
----
-
 ### How to Download this App
 1. Click the green Code Button on this github page
 2. Choose Download ZIP
