@@ -1,5 +1,5 @@
 # CATopalian HTML JavaScript Editor
-A JavaScript application that is an HTML JavaScript Code Editor that can edit text, run JavaScript, render HTML and save and load files.  
+A JavaScript application that is an HTML JavaScript Code Editor that can edit code, run JavaScript, render HTML and save and load files.  
 
 Please Follow my Github page here and give this project a LIKE :-)
 Much Appreciated :-)  
