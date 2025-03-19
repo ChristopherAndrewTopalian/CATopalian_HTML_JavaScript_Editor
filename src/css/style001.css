@@ -1,0 +1,85 @@
+/* style001.css */
+
+body
+{
+    background-color: rgb(40, 40, 40);
+    color: rgb(255, 255, 255);
+}
+
+textarea
+{
+    width: 400px;
+    height: 400px;
+    border: solid 1px rgb(100, 100, 100);
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    resize: none;
+}
+
+iframe
+{
+    width: 70%;
+    height: 400px;
+    border: solid 1px;
+}
+
+.mainDiv
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.buttonStyle001
+{
+    border: solid 1px rgb(200, 200, 200);
+    border-radius: 8px;
+    background-color: rgb(0, 0, 0);
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(130, 130, 130);
+}
+
+.buttonStyle001:hover
+{
+    border-color: rgb(0, 255, 255);
+    color: rgb(0, 255, 255);
+}
+
+.buttonStyle001:active
+{
+    border-color: rgb(255, 0, 255);
+    color: rgb(255, 0, 255);
+}
+
+input[type="file"] {
+    opacity: 1;
+    background-color: rgb(0, 0, 0);
+    color: rgb(130, 130, 130);
+    position: absolute;
+    left: -80px;
+    top: -5px;
+    font-size: 14px;
+    text-align: right;
+    cursor: pointer;
+}
+
+
+#htmlInput
+{
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+#output
+{
+    color: white;
+}
+
+#container
+{
+    display: flex;
+    flex-direction: column;
+}
