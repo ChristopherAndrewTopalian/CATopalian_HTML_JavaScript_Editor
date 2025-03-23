@@ -5,7 +5,7 @@ function makeTitleOfApp()
     let titleOfApplication = ce("a");
     titleOfApplication.style.position = 'absolute';
     titleOfApplication.style.right = '7px';
-    titleOfApplication.style.bottom = '-30px';
+    titleOfApplication.style.bottom = '0px';
     titleOfApplication.style.fontSize = '17px';
     titleOfApplication.style.color = 'rgb(100, 100, 100)';
     titleOfApplication.style.fontWeight = 'bold';
