@@ -1,22 +1,30 @@
-// makeApp.js
+// makeInterface.js
 
-function makeApp()
+function makeInterface()
 {
     let mainDiv = ce('div');
-    mainDiv.className = 'mainDiv';
-    mainDiv.id = 'mainDiv';
+    mainDiv.style.display = 'flex';
+    mainDiv.style.flexDirection = 'column';
     ba(mainDiv);
 
     //-//
 
-    let container = ce('div');
-    container.id = 'container';
-    mainDiv.append(container);
+    let titleOfApp = ce('a');
+    titleOfApp.id = 'titleOfApp';
+    titleOfApp.textContent = 'CATopalian HTML JavaScript Code Editor';
+    titleOfApp.href = 'https://github.com/ChristopherAndrewTopalian/CATopalian_HTML_JavaScript_Code_Editor';
+    titleOfApp.target = '_blank';
+    titleOfApp.style.fontFamily = 'Arial';
+    titleOfApp.style.fontSize = '17px';
+    titleOfApp.style.fontWeight = 'bold';
+    titleOfApp.style.textDecoration = 'none';
+    titleOfApp.style.color = 'rgb(100, 100, 100)';
+    mainDiv.append(titleOfApp);
 
     //-//
 
     let fileInputButton = ce('input');
-    fileInputButton.innerHTML = 'fileInput';
+    fileInputButton.textContent = 'fileInput';
     fileInputButton.type = 'file';
     fileInputButton.id = 'fileInput';
     fileInputButton.className = 'buttonStyle001';
@@ -33,7 +41,25 @@ function makeApp()
     {
         audioPlay('sfx_blip_001', 1.0);
     };
-    container.append(fileInputButton);
+    fileInputButton.style.display = 'none';
+    mainDiv.append(fileInputButton);
+
+    let fileBtn = ce('button');
+    fileBtn.textContent = 'Open';
+    fileBtn.style.alignSelf = 'flex-start';
+    fileBtn.onclick = function()
+    {
+        fileInputButton.click();
+    };
+    mainDiv.append(fileBtn);
+
+    //-//
+
+    let container = ce('div');
+    container.style.display = 'flex';
+    container.style.flexDirection = 'row';
+    container.style.marginBottom = '5px';
+    mainDiv.append(container);
 
     //-//
 
@@ -45,10 +71,16 @@ function makeApp()
 
     //-//
 
+    let frameOutput = ce('iframe');
+    frameOutput.id = 'output';
+    container.append(frameOutput);
+
+    //-//
+
     let buttonRowContainer = ce('div');
     buttonRowContainer.style.display = 'flex';
     buttonRowContainer.style.flexDirection = 'row';
-    container.append(buttonRowContainer);
+    mainDiv.append(buttonRowContainer);
 
     //-//
 
@@ -118,7 +150,7 @@ function makeApp()
     scriptButtonContainer.style.height = '100px';
     scriptButtonContainer.style.padding = '10px';
     scriptButtonContainer.style.overflowY = 'scroll';
-    container.append(scriptButtonContainer)
+    mainDiv.append(scriptButtonContainer)
 
     for (let x = 0; x < templates.length; x++)
     {
@@ -140,18 +172,13 @@ function makeApp()
         };
 
         scriptButtonContainer.append(theButton);
-
-        //-//
     }
-        let frameOutput = ce('iframe');
-        frameOutput.id = 'output';
-        mainDiv.append(frameOutput);
 }
 
 //----//
 
 // Dedicated to God the Father
-// All Rights Reserved Christopher Andrew Topalian Copyright 2000-2025
+// All Rights Reserved Christopher Andrew Topalian Copyright 2000-2026
 // https://github.com/ChristopherTopalian
 // https://github.com/ChristopherAndrewTopalian
 // https://sites.google.com/view/CollegeOfScripting
