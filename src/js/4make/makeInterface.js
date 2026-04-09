@@ -123,10 +123,32 @@ function makeInterface()
     evaluateButton.innerHTML = 'Activate';
     evaluateButton.className = 'buttonStyle001';
     evaluateButton.style.marginLeft = '200px';
+
     evaluateButton.onclick = function()
     {
-        eval(ge('htmlInput').value);
+        // Grab the raw text from the input
+        let rawCode = ge('htmlInput').value;
+
+        try
+        {
+            // Wrap the text in an anonymous function and execute it
+            let result = new Function(rawCode)();
+
+            // Optional: Do something with the result if the user used 'return'
+            if (result !== undefined)
+            {
+                console.log("Result: ", result);
+                // ge('outputDiv').innerHTML = result; // Uncomment if you have an output div!
+            }
+        } 
+        catch (error)
+        {
+            // If they try to type HTML like <h1>Hello</h1>, it will fail safely here
+            console.error("Syntax Error: ", error.message);
+            // alert("Syntax Error: " + error.message); 
+        }
     };
+
     buttonRowContainer.append(evaluateButton);
 
     //-//
